@@ -1,0 +1,14 @@
+<div class="container wrap-fibonacci">
+    <h1>Fibonacci Number:</h1>
+    <div class="fibonacci-number">
+        {{ fibonacciNumber }}
+    </div>
+    <div class="wrap-button btn-group my-3" role="group">
+        <button class="btn btn-primary" class="btn btn-primary" (click)="goToPage(page - 1)" [disabled]="page <= 1">Previous</button>
+        <button class="btn btn-primary" (click)="goToPage(page + 1)">Next </button>
+    </div>
+    <div class="text-center my-3">
+        <label for="pageInput" class="form-label">Jump to page: </label>
+        <input type="number" id="pageInput" class="form-control d-inline-block w-auto" [(ngModel)]="page" (change)="goToPage(page)" min="1">
+    </div>
+</div>
