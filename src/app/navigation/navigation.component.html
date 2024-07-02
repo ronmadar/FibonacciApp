@@ -1,0 +1,5 @@
+<nav >
+    <a [routerLink]="['/fibonacci', page - 1]" [class.disabled]="page <= 1">Previous</a>
+    <a [routerLink]="['/fibonacci', page + 1]">Next</a>
+</nav>
+  
